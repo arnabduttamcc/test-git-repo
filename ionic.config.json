@@ -1,0 +1,7 @@
+{
+  "name": "dummy-start",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
