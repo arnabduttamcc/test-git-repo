@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { FolderPageRoutingModule } from './folder-routing.module';
 
 import { FolderPage } from './folder.page';
+import { LongpressDirective } from '../directives/longpress.directive';
 
 @NgModule({
   imports: [
@@ -15,6 +16,6 @@ import { FolderPage } from './folder.page';
     IonicModule,
     FolderPageRoutingModule
   ],
-  declarations: [FolderPage]
+  declarations: [FolderPage, LongpressDirective]
 })
-export class FolderPageModule {}
+export class FolderPageModule { }

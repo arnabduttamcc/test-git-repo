@@ -16,7 +16,7 @@
 @import "~@ionic/angular/css/normalize.css";
 @import "~@ionic/angular/css/structure.css";
 @import "~@ionic/angular/css/typography.css";
-@import '~@ionic/angular/css/display.css';
+@import "~@ionic/angular/css/display.css";
 
 /* Optional CSS utils that can be commented out */
 @import "~@ionic/angular/css/padding.css";
@@ -24,3 +24,324 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+.alert-radio-group.sc-ion-alert-md,
+.alert-checkbox-group.sc-ion-alert-md {
+  width: 100%;
+}
+ion-alert {
+  .alert-wrapper {
+    .alert-head.sc-ion-alert-md {
+      font-size: 20px !important;
+    }
+  }
+  .alert-head.sc-ion-alert-md {
+    font-size: 20px !important;
+  }
+}
+
+/* Alert design */
+.alert-wrapper {
+  align-items: center;
+  padding: 10px;
+  .alert-button:first-child {
+    color: var(--ion-color-light);
+    background-color: var(--ion-color-primary);
+    font-weight: bold;
+    padding: 10px 30px;
+  }
+  .alert-button:last-child {
+    background-color: var(--ion-color-danger);
+    color: var(--ion-color-light);
+    font-weight: bold;
+  }
+}
+.alert-button-group.sc-ion-alert-md {
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.alert-button-group-vertical.sc-ion-alert-md {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.success-alert,
+.error-alert,
+.warning-alert {
+  .alert-head {
+    background: transparent !important;
+  }
+  .alert-message {
+    text-align: center;
+  }
+  ion-icon {
+    font-size: 50px;
+    margin: 8px;
+  }
+}
+.success-alert {
+  .alert-head h2 {
+    color: var(--ion-color-success) !important;
+  }
+  .alert-wrapper {
+    border-top: 4px solid var(--ion-color-success);
+  }
+  .alert-sub-title {
+    color: var(--ion-color-success);
+    font-weight: 500;
+    font-size: 18px;
+  }
+  ion-icon {
+    color: var(--ion-color-success);
+  }
+}
+.error-alert {
+  .alert-head h2 {
+    color: var(--ion-color-danger) !important;
+  }
+  .alert-wrapper {
+    border-top: 4px solid var(--ion-color-danger);
+  }
+  .alert-sub-title {
+    color: var(--ion-color-danger);
+    font-weight: 500;
+    font-size: 18px;
+  }
+  ion-icon {
+    color: var(--ion-color-danger);
+  }
+}
+.warning-alert {
+  .alert-head h2 {
+    color: var(--ion-color-warning) !important;
+  }
+  .alert-wrapper {
+    border-top: 4px solid var(--ion-color-warning);
+  }
+  .alert-sub-title {
+    color: var(--ion-color-warning);
+    font-weight: 500;
+    font-size: 18px;
+  }
+  ion-icon {
+    color: var(--ion-color-warning);
+  }
+}
+/*Start Alert*/
+.alert-wrapper .alert-head {
+  width: 100%;
+  border-radius: 5px;
+  background: var(--ion-color-violate);
+  padding: 10px 8px;
+  // @include basic-tx-format;
+}
+
+.alert-wrapper .alert-head .alert-title,
+.alert-wrapper .alert-head .alert-sub-title {
+  // @include basic-tx-format;
+  color: #fff;
+  font-weight: bold !important;
+}
+
+.alert-wrapper .alert-button-group {
+  padding: 8px;
+  border-top: 1px solid #ddd;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+  align-items: center;
+}
+
+.alert-wrapper .alert-button-group button {
+  background: var(--ion-color-violate);
+  // @include basic-tx-format;
+  border-radius: 5px;
+  height: 35px;
+  color: #fff;
+  text-align: center;
+}
+
+.alert-wrapper .alert-button-group button:last-child {
+  margin: 0px;
+  background: var(--ion-color-danger);
+  .alert-button-inner.sc-ion-alert-md {
+    justify-content: center;
+  }
+}
+
+.alert-wrapper .alert-button-group button.alert-button-role-cancel {
+  background: var(--ion-color-danger) !important;
+}
+
+.alert-wrapper .alert-radio-group .alert-radio-label {
+  // @include basic-tx-format;
+  padding: 0px 0px 0px 15px;
+}
+
+.alert-wrapper .alert-radio-group .alert-tappable {
+  height: 35px;
+}
+
+.alert-wrapper .alert-radio-group .alert-radio-icon {
+  left: 10px;
+  width: 18px;
+  height: 18px;
+  border-color: #737373 !important;
+}
+
+.alert-wrapper .alert-radio-group .alert-radio-icon .alert-radio-inner {
+  left: 2px;
+  top: 2px;
+  background: var(--ion-color-danger);
+}
+
+.alert-wrapper .alert-message {
+  padding: 10px 8px;
+  // @include basic-tx-format;
+  text-align: center;
+  width: 100%;
+  line-height: 22px !important;
+}
+
+.alert-wrapper .alert-message ion-icon {
+  font-size: 22px;
+}
+
+.alert-wrapper .alert-input-group {
+  padding: 8px;
+}
+
+.alert-wrapper .alert-input-group .alert-input-wrapper textarea,
+.alert-wrapper .alert-input-group .alert-input-wrapper input,
+.alert-wrapper .alert-input-group .alert-input-wrapper select {
+  border: 1px solid #ddd;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 13px;
+  line-height: 14px;
+  color: #0f0f0f;
+}
+
+/*End Alert*/
+
+.btn-violate {
+  --background: linear-gradient(89.82deg, #3c3685 0.1%, #cf2765 106.95%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 30px !important;
+}
+.btn-primary {
+  --background: radial-gradient(
+        92.09% 85.42% at 86.3% 87.5%,
+        rgba(0, 0, 0, 0.23) 0%,
+        rgba(0, 0, 0, 0) 86.18%
+      )
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+    radial-gradient(
+        65.28% 65.28% at 26.39% 20.83%,
+        rgba(255, 255, 255, 0.413) 0%,
+        rgba(255, 255, 255, 0) 69.79%,
+        rgba(255, 255, 255, 0) 100%
+      )
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+    #4c43cd;
+  box-shadow: 4px 12px 62px rgba(0, 0, 0, 0.5);
+  border-radius: 30px !important;
+}
+.btn-danger {
+  --background: radial-gradient(
+        92.09% 85.42% at 86.3% 87.5%,
+        rgba(0, 0, 0, 0.23) 0%,
+        rgba(0, 0, 0, 0) 86.18%
+      )
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+    radial-gradient(
+        65.28% 65.28% at 26.39% 20.83%,
+        rgba(255, 255, 255, 0.413) 0%,
+        rgba(255, 255, 255, 0) 69.79%,
+        rgba(255, 255, 255, 0) 100%
+      )
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+    #ec0e52;
+  box-shadow: 4px 14px 62px rgba(0, 0, 0, 0.5);
+  border-radius: 30px !important;
+}
+
+//==================================//
+
+ion-grid.keyboard {
+  background: #cbcbcb;
+  position: fixed;
+  bottom: 0;
+  left: 0px;
+  padding: 10px 20px;
+  width: 100%;
+  border-top: 2px solid #8f9092;
+  z-index: 99999;
+
+  // &::after {
+  //   content: "";
+  //   width: 2.9rem;
+  //   height: 1.6rem;
+  //   background-color: #c8cac0;
+  //   border-radius: 10rem 10rem 0 0;
+  //   position: absolute;
+  //   top: -27px;
+  //   right: 11px;
+  //   border: 2px solid #8f9092;
+  //   border-bottom: 0px;
+  // }
+}
+
+.background-button-bg {
+  user-select: none;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  cursor: pointer;
+  width: 92%;
+  height: 36px;
+  background-image: linear-gradient(to top, #d8d9db 0%, #fff 80%, #fdfdfd 100%);
+  border-radius: 30px;
+  border: 1px solid #8f9092;
+  box-shadow: 0px 1px 3px 1px #fcfcfced, 1px -1px 8px #d6d7d970,
+    0 -4px 4px #cecfd157, 0 -6px 4px #fefefe08, inset 0 0 3px 0 #cecfd100;
+  // transition: all 0.2s ease;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 19px;
+  font-weight: 600;
+  color: #606060;
+  text-shadow: 0 1px #fff;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  margin-left: 3px;
+
+  &:active {
+    box-shadow: 0 4px 3px 1px #fcfcfc59, 0 6px 8px #d6d7d961,
+      0 -4px 4px #cecfd1bf, 1px -4px 4px #fefefe78, inset 0 0 5px 3px #999,
+      inset 0 0 30px #aaa;
+  }
+}
+
+.close-keyboard {
+  position: absolute;
+  top: -24px;
+  right: 13px;
+  z-index: 99;
+  font-size: 21px;
+  width: 2.9rem;
+  height: 1.6rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #565656;
+}
+
+@mixin volate-gradant-btn {
+  --background: linear-gradient(89.82deg, #3c3685 0.1%, #cf2765 106.95%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border: 2px solid #ffffff;
+  border-radius: 45px;
+  font-size: 17px;
+  overflow: hidden;
+}

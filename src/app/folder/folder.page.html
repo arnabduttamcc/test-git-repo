@@ -14,8 +14,22 @@
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong class="capitalize">{{ folder }}</strong>
-    <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <!-- Long Press r@D -->
+  <ion-card>
+    <ion-card-header>Long Press Directive</ion-card-header>
+    <ion-button appLongpress (press)="callFunction()">Click For Long Press</ion-button>
+  </ion-card>
+
+  <!-- File Download r@D -->
+  <ion-card>
+    <ion-card-header>File Download </ion-card-header>
+    <ion-button (click)="generateReport()">Click For Download</ion-button>
+  </ion-card>
+
+
+  <ion-button (click)="scanToken()">Scan Token</ion-button>
+
+
+  <ion-button (click)="scanToken1()">Scan Token</ion-button>
+
 </ion-content>
